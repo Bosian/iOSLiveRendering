@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pO7-16-hxF">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Custom View Controller-->
+        <scene sceneID="pYq-GW-4rk">
+            <objects>
+                <viewController storyboardIdentifier="CustomViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pO7-16-hxF" customClass="CustomViewController" customModule="LiveRendering" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ngM-Ez-xxc"/>
+                        <viewControllerLayoutGuide type="bottom" id="mWp-2D-OdI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Evu-Sw-NRR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CkY-lM-iSs">
+                                <rect key="frame" x="20" y="20" width="49" height="50"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9XO-df-p0g"/>
+                                    <constraint firstAttribute="width" constant="49" id="zqq-bS-pcJ"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="修改測試" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bN-B7-Q1k">
+                                <rect key="frame" x="77" y="20" width="223" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="fEt-UL-3rW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpF-SL-k2P">
+                                <rect key="frame" x="77" y="40" width="223" height="30"/>
+                                <state key="normal" title="按鈕"/>
+                                <connections>
+                                    <action selector="buttonHandler:" destination="pO7-16-hxF" eventType="touchUpInside" id="b8a-lE-n1C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mWp-2D-OdI" firstAttribute="top" secondItem="CkY-lM-iSs" secondAttribute="bottom" constant="30" id="Knl-Xy-fzP"/>
+                            <constraint firstItem="wpF-SL-k2P" firstAttribute="centerX" secondItem="0bN-B7-Q1k" secondAttribute="centerX" id="QHL-a3-09S"/>
+                            <constraint firstItem="0bN-B7-Q1k" firstAttribute="top" secondItem="ngM-Ez-xxc" secondAttribute="bottom" id="Vt0-pb-XaY"/>
+                            <constraint firstItem="CkY-lM-iSs" firstAttribute="leading" secondItem="Evu-Sw-NRR" secondAttribute="leading" constant="20" id="VwN-2x-96y"/>
+                            <constraint firstAttribute="trailing" secondItem="0bN-B7-Q1k" secondAttribute="trailing" constant="20" id="cfH-6x-6TA"/>
+                            <constraint firstItem="CkY-lM-iSs" firstAttribute="top" secondItem="ngM-Ez-xxc" secondAttribute="bottom" id="fZR-MD-g5K"/>
+                            <constraint firstItem="wpF-SL-k2P" firstAttribute="width" secondItem="0bN-B7-Q1k" secondAttribute="width" id="gnu-b3-DRN"/>
+                            <constraint firstItem="wpF-SL-k2P" firstAttribute="top" secondItem="0bN-B7-Q1k" secondAttribute="bottom" constant="-1" id="hkh-wB-p6T"/>
+                            <constraint firstItem="0bN-B7-Q1k" firstAttribute="leading" secondItem="CkY-lM-iSs" secondAttribute="trailing" constant="8" id="iuA-3X-iww"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Knl-Xy-fzP"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="100"/>
+                    <connections>
+                        <outlet property="colorView" destination="CkY-lM-iSs" id="sfF-mp-44A"/>
+                        <outlet property="titleLabel" destination="0bN-B7-Q1k" id="vEO-Vz-8Jm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ch-jo-gj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="377" y="371"/>
+        </scene>
+    </scenes>
+</document>

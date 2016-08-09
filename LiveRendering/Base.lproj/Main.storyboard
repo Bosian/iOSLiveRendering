@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="y7p-xL-kcp">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--首頁-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LiveRendering" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Vz-IU-OnR" customClass="CustomViewLoader" customModule="LiveRendering" customModuleProvider="target">
+                                <rect key="frame" x="40" y="72" width="240" height="63"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="B6O-Fq-3Cx"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFx-eP-IVw" customClass="CustomViewLoader" customModule="LiveRendering" customModuleProvider="target">
+                                <rect key="frame" x="40" y="143" width="240" height="65"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="fHe-4H-3DS"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbx-ED-Tai">
+                                <rect key="frame" x="137" y="518" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dFx-eP-IVw" secondAttribute="trailing" constant="40" id="6lp-ig-Joz"/>
+                            <constraint firstAttribute="trailing" secondItem="2Vz-IU-OnR" secondAttribute="trailing" constant="40" id="9ap-Hz-8W8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xbx-ED-Tai" secondAttribute="bottom" constant="20" id="EP6-AR-W5o"/>
+                            <constraint firstItem="xbx-ED-Tai" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="InM-nn-12D"/>
+                            <constraint firstItem="2Vz-IU-OnR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="LkR-Pd-zrh"/>
+                            <constraint firstItem="dFx-eP-IVw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="m0F-tH-E6V"/>
+                            <constraint firstItem="2Vz-IU-OnR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="rRX-vJ-87R"/>
+                            <constraint firstItem="dFx-eP-IVw" firstAttribute="top" secondItem="2Vz-IU-OnR" secondAttribute="bottom" constant="8" id="xfa-4F-geV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="首頁" id="6aI-DJ-gFt"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971" y="320"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1nc-Cs-LgF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y7p-xL-kcp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TXx-xC-XCV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pNX-ne-K6O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lkg-Wg-mA3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="525" y="320"/>
+        </scene>
+    </scenes>
+</document>
